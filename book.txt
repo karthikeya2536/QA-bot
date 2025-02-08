@@ -1,0 +1,12 @@
+Chapter 1: Introduction to AI
+Artificial Intelligence (AI) is the field of study that enables machines to mimic human intelligence. It includes machine learning, deep learning, natural language processing, and more.
+
+Chapter 2: Machine Learning Basics
+Machine learning is a subset of AI where machines learn from data without being explicitly programmed. There are three types of machine learning: supervised, unsupervised, and reinforcement learning.
+
+Chapter 3: Deep Learning
+Deep learning is a branch of machine learning that uses neural networks with multiple layers to analyze and process complex patterns in data. It has been widely used in computer vision, speech recognition, and NLP.
+
+Chapter 4: Applications of AI
+AI is used in various fields such as healthcare, finance, self-driving cars, and more. It has revolutionized industries by improving efficiency and decision-making.
+
