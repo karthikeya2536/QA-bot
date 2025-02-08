@@ -124,3 +124,29 @@ git push origin main
 
 # QA-bot
 # QA-bot
+Observations & Key Learnings
+Importance of Context Retrieval
+
+A Small Language Model (SLM) struggles with long-form text comprehension. Efficient retrieval mechanisms, like FAISS and Sentence Transformers, significantly improve the quality of answers by selecting the most relevant passages.
+Setting an optimal similarity threshold is crucial to filter out irrelevant paragraphs.
+Challenges in Answer Extraction
+
+QA models like DistilBERT can fail when the context is ambiguous or lacks a direct answer.
+Token alignment issues (e.g., handling subword tokens like "##ing") need careful post-processing to generate coherent responses.
+Short answers (fewer than 4 words) often indicate failure, requiring fallback strategies.
+Fallback Mechanisms Improve Reliability
+
+When QA extraction fails, using sentence similarity ranking helps extract the best possible sentence.
+Ensuring at least one complete sentence in the answer reduces incorrect or incomplete responses.
+Efficient Computation Matters
+
+Encoding the entire book in advance speeds up retrieval, but requires memory optimization for large books.
+Batch encoding can be used to speed up FAISS indexing for larger datasets.
+Model Selection & Limitations
+
+DistilBERT is lightweight and fast but lacks deeper contextual understanding.
+A more advanced fine-tuned model (like BERT-Large or T5) could enhance performance, but at the cost of computational efficiency.
+Practicality of an SLM for QA
+
+While powerful, SLMs are best suited for specific domains where the knowledge scope is predefined.
+Scaling this solution for larger datasets requires efficient chunking strategies and incremental indexing to handle large texts dynamically.
